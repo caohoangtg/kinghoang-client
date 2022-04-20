@@ -1,0 +1,22 @@
+.header {
+    .header__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 13px 0;
+        text-align: center;
+    }
+
+    .header__brand-name {
+        flex-grow: 1;
+        color: var(--color-main-text);
+        font-size: 1rem; //0.875rem
+        font-weight: 800;
+    }
+
+    .header__menu-icon,
+    .header__search-icon {
+        display: flex;
+        cursor: pointer;
+    }
+}

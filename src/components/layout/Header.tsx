@@ -1,9 +1,24 @@
 import React from 'react'
+import Container from '@mui/material/Container'
+import { BsSearch } from 'react-icons/bs'
+import { GiHamburgerMenu } from 'react-icons/gi'
 
 const Header = () => {
     return (
-        <header>
-            <h1>Header</h1>
+        <header id="header" className="header">
+            <Container fixed>
+                <div className="header__container">
+                    <div className="header__menu-icon">
+                        <GiHamburgerMenu size={'1.75em'} color="#F05223" />
+                    </div>
+                    <div className="header__brand-name">
+                        <h5>Eighteen Chefs @ Bugis Junction</h5>
+                    </div>
+                    <div className="header__search-icon">
+                        <BsSearch size={'1.25em'} color="#F05223" />
+                    </div>
+                </div>
+            </Container>
         </header>
     )
 }

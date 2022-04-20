@@ -1,0 +1,12 @@
+.slick-dots {
+    &.slick-banner {
+        bottom: 0px;
+
+        li {
+            top: -5px;
+            width: 10px;
+            height: 10px;
+            margin: 0px 5px;
+        }
+    }
+}

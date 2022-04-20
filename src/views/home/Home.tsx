@@ -1,22 +1,26 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { Header, Footer } from '../../components/layout'
-import { ProductList } from '../../components/main'
+import { ProductList, HeaderBanner, Recommended } from '../../components/main'
+
+import CssBaseline from '@mui/material/CssBaseline'
+import Box from '@mui/material/Box'
+import Container from '@mui/material/Container'
 
 const Home = () => {
     return (
         <>
-            <Header />
-            <main>
-                <ProductList />
-                <div>
-                    {process.env.NODE_ENV}
-                    {process.env.PUBLIC_URL}
-                    {process.env.TARGET_ENV}
-                    <Link to="/product">View Product </Link>
-                </div>
-            </main>
-            <Footer />
+            <React.Fragment>
+                <CssBaseline />
+                <Header />
+                <Container fixed>
+                    <HeaderBanner />
+                    <Recommended />
+                    <Box sx={{ bgcolor: '#cfe8fc', height: '500vh' }}>
+                        <ProductList />
+                    </Box>
+                </Container>
+                <Footer />
+            </React.Fragment>
         </>
     )
 }
