@@ -5,9 +5,6 @@ import ProductLinear from './ProductLinear'
 const ProductList = () => {
     return (
         <div className="product-list">
-            {/* {process.env.NODE_ENV}
-            {process.env.PUBLIC_URL}
-            {process.env.TARGET_ENV} */}
             <div className="product-list__title-category">Coconut series</div>
             <ProductLinear />
             <ProductLinear />

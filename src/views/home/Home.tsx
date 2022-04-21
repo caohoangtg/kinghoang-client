@@ -9,6 +9,7 @@ import {
 
 import CssBaseline from '@mui/material/CssBaseline'
 import Container from '@mui/material/Container'
+// import ProductToCart from '../../components/main/product/ProductToCart'
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
                 <Header />
                 <main className="home-page__main">
                     <HeaderBanner />
+                    {/* <ProductToCart /> */}
                     <Container fixed className="home-page__body">
                         <Recommended />
                         <CategoryTab />
