@@ -1,7 +1,15 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--color-main-text);
+    background-color: var(--color-main);
 }
 
 .d-flex {
     display: flex;
+}
+
+.line-horizontal {
+    border-bottom: 1px solid #ebebeb;
+    width: 90%;
+    margin: auto;
 }

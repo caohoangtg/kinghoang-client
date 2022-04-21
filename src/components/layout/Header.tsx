@@ -12,7 +12,7 @@ const Header = () => {
                         <GiHamburgerMenu size={'1.75em'} color="#F05223" />
                     </div>
                     <div className="header__brand-name">
-                        <h5>Eighteen Chefs @ Bugis Junction</h5>
+                        Eighteen Chefs @ Bugis Junction
                     </div>
                     <div className="header__search-icon">
                         <BsSearch size={'1.25em'} color="#F05223" />

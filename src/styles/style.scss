@@ -1,5 +1,16 @@
 @import './elements/_base.scss';
+@import './elements/_button.scss';
 
 @import './components/_home.scss';
+
 @import './components/layout/_header.scss';
+@import './components/layout/_footer.scss';
+
 @import './components/banner/_banner.scss';
+
+@import './components/recommended/_recommended.scss';
+
+@import './components/product/_product.scss';
+@import './components/product/_product-list.scss';
+
+@import './components/category/_category-tab.scss';

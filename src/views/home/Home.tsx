@@ -1,27 +1,34 @@
 import React from 'react'
 import { Header, Footer } from '../../components/layout'
-import { ProductList, HeaderBanner, Recommended } from '../../components/main'
+import {
+    ProductList,
+    HeaderBanner,
+    Recommended,
+    CategoryTab,
+} from '../../components/main'
 
 import CssBaseline from '@mui/material/CssBaseline'
-import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 
 const Home = () => {
     return (
-        <>
-            <React.Fragment>
+        <React.Fragment>
+            <div className="home-page">
                 <CssBaseline />
                 <Header />
-                <Container fixed>
+                <main className="home-page__main">
                     <HeaderBanner />
-                    <Recommended />
-                    <Box sx={{ bgcolor: '#cfe8fc', height: '500vh' }}>
+                    <Container fixed className="home-page__body">
+                        <Recommended />
+                        <CategoryTab />
                         <ProductList />
-                    </Box>
-                </Container>
+                        <ProductList />
+                        <ProductList />
+                    </Container>
+                </main>
                 <Footer />
-            </React.Fragment>
-        </>
+            </div>
+        </React.Fragment>
     )
 }
 
