@@ -38,9 +38,9 @@ const Recommended = () => {
                 scrollbar={{
                     hide: true,
                 }}
-                className="recommended-swiper"
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
+                className="recommended__swiper"
+                // onSlideChange={() => console.log('slide change')}
+                // onSwiper={(swiper) => console.log(swiper)}
             >
                 <SwiperSlide>
                     <ProductCard />

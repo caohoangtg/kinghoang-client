@@ -10,7 +10,7 @@ import 'swiper/css/autoplay'
 // eslint-disable-next-line import/no-unresolved
 import 'swiper/css/pagination'
 
-const HeaderBanner = () => {
+const ProductImage = () => {
     const pagination = {
         clickable: true,
         renderBullet: function (index: number, className: string) {
@@ -63,4 +63,4 @@ const HeaderBanner = () => {
     )
 }
 
-export default HeaderBanner
+export default ProductImage

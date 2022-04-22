@@ -6,9 +6,17 @@ import { grey } from '@mui/material/colors'
 // import Button from '@mui/material/Button'
 import { BsSearch } from 'react-icons/bs'
 import Box from '@mui/material/Box'
-import Skeleton from '@mui/material/Skeleton'
-import Typography from '@mui/material/Typography'
+//import Skeleton from '@mui/material/Skeleton'
 import SwipeableDrawer from '@mui/material/SwipeableDrawer'
+import Typography from '@mui/material/Typography'
+
+import { VscClose } from 'react-icons/vsc'
+import { IoIosRemoveCircle, IoIosAddCircle } from 'react-icons/io'
+import ProductImage from './ProductImage'
+import IconButton from '@mui/material/IconButton'
+import { Modifier } from '../modifier'
+import { Variant } from '../variant'
+import Button from '@mui/material/Button'
 
 const drawerBleeding = 56
 
@@ -55,75 +63,124 @@ const ProductToCart = (props: Props) => {
         window !== undefined ? () => window().document.body : undefined
 
     return (
-        <Root>
-            <CssBaseline />
-            <Global
-                styles={{
-                    '.ProductToCart-drawer.MuiDrawer-root > .MuiPaper-root': {
-                        height: `calc(100% - ${drawerBleeding}px)`,
-                        overflow: 'visible',
-                    },
-                }}
-            />
-            <Box
-                sx={{ textAlign: 'center', pt: 1, backgroundColor: '#FFFFFF' }}
-            >
-                {/* <Button onClick={toggleDrawer(true)}>Open</Button> */}
-                <BsSearch
-                    size={'1.25em'}
-                    color="#F05223"
-                    onClick={toggleDrawer(true)}
+        <div className="product-tc">
+            <Root>
+                <CssBaseline />
+                <Global
+                    styles={{
+                        '.product-tc-drawer.MuiDrawer-root > .MuiPaper-root': {
+                            height: `calc(100% - ${drawerBleeding}px)`,
+                            overflow: 'visible',
+                        },
+                    }}
                 />
-            </Box>
-            <SwipeableDrawer
-                container={container}
-                anchor="bottom"
-                open={open}
-                onClose={toggleDrawer(false)}
-                onOpen={toggleDrawer(true)}
-                disableSwipeToOpen={false}
-                ModalProps={{
-                    keepMounted: false,
-                }}
-                className="ProductToCart-drawer"
-            >
-                <StyledBox
+                <Box
                     sx={{
-                        position: 'absolute',
-                        top: -drawerBleeding,
-                        borderTopLeftRadius: 0,
-                        borderTopRightRadius: 0,
-                        visibility: 'visible',
-                        right: 0,
-                        left: 0,
+                        textAlign: 'center',
+                        pt: 1,
+                        backgroundColor: '#FFFFFF',
                     }}
                 >
-                    {/* <Puller /> */}
-                    <Typography
+                    {/* <Button onClick={toggleDrawer(true)}>Open</Button> */}
+                    <BsSearch
+                        size={'1.25em'}
+                        color="#F05223"
+                        onClick={toggleDrawer(true)}
+                    />
+                </Box>
+                <SwipeableDrawer
+                    container={container}
+                    anchor="bottom"
+                    open={open}
+                    onClose={toggleDrawer(false)}
+                    onOpen={toggleDrawer(true)}
+                    disableSwipeToOpen={true}
+                    ModalProps={{
+                        keepMounted: false,
+                    }}
+                    className="product-tc-drawer"
+                >
+                    <StyledBox
                         sx={{
-                            p: 2,
-                            fontWeight: 700,
-                            fontSize: 20,
-                            textDecorationLine: 'underline',
-                            color: '#F05223',
-                            textAlign: 'center',
+                            position: 'absolute',
+                            top: -drawerBleeding,
+                            visibility: 'visible',
+                            right: 0,
+                            left: 0,
                         }}
+                        className="product-tc__header"
                     >
-                        Product To Cart
-                    </Typography>
-                </StyledBox>
-                <StyledBox
-                    sx={{
-                        px: 2,
-                        pb: 2,
-                        height: '100%',
-                        overflow: 'auto',
-                    }}
-                >
-                    <Skeleton variant="rectangular" height="100%" />
-                </StyledBox>
-            </SwipeableDrawer>
-        </Root>
+                        <Button onClick={toggleDrawer(false)}>
+                            <VscClose size={36} color="#333333" />
+                        </Button>
+
+                        <Typography sx={{ p: 2 }} className="product-tc__name">
+                            Carbonara with Sous Vide Egg
+                        </Typography>
+                    </StyledBox>
+                    <StyledBox
+                        sx={{
+                            px: 2,
+                            pb: 2,
+                            height: '100%',
+                            overflow: 'auto',
+                        }}
+                        className="product-tc__body"
+                    >
+                        {/* <Skeleton variant="rectangular" height="100%" /> */}
+                        <div className="product-tc__content">
+                            <ProductImage />
+                            <div className="product-tc__info">
+                                <div className="product-tc__price">S$15.00</div>
+                                <div className="product-tc__package-fee">
+                                    Package fee: S$1.00
+                                </div>
+                            </div>
+                            <div className="product-tc__description">
+                                <p>
+                                    Bee hoon braised cooked for hours Lorem
+                                    ipsum dolor sit amet, consectetur adipiscing
+                                    elit. Duis vel ipsum feugiat, faucibus lorem
+                                    sit amet. Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit, posuere. Lorem
+                                    ipsum dolor sit amet, consectetur adipiscing
+                                    elit. Duis vel ipsum feugiat, faucibus lorem
+                                    sit amet. Lorem ipsum dolor sit amet,
+                                    consectetur3
+                                </p>
+                                <a href="#a">See Less</a>
+                            </div>
+                            <Variant />
+                            <Modifier />
+                            <Modifier />
+                            <Modifier />
+                            <Modifier />
+                        </div>
+                    </StyledBox>
+
+                    <StyledBox className="product-tc__footer">
+                        <div className="product-tc__quality">
+                            <IconButton
+                                className="color-icon"
+                                aria-label="remove from cart"
+                            >
+                                <IoIosRemoveCircle size={40} />
+                            </IconButton>
+                            <span>1</span>
+                            <IconButton
+                                className="color-icon"
+                                aria-label="add to cart"
+                            >
+                                <IoIosAddCircle size={40} />
+                            </IconButton>
+                        </div>
+                        <div className="product-tc__add-to-cart">
+                            ADD - S$115.00
+                        </div>
+                    </StyledBox>
+                </SwipeableDrawer>
+            </Root>
+        </div>
     )
 }
 

@@ -9,6 +9,11 @@ import ListItemText from '@mui/material/ListItemText'
 import { MdMoveToInbox, MdMail } from 'react-icons/md'
 
 import { GiHamburgerMenu } from 'react-icons/gi'
+import { VscClose } from 'react-icons/vsc'
+import { GoGlobe } from 'react-icons/go'
+
+import NativeSelect from '@mui/material/NativeSelect'
+import FormControl from '@mui/material/FormControl'
 
 type Anchor = 'left'
 
@@ -41,9 +46,34 @@ const Menu = () => {
                 height: '100%',
             }}
             role="presentation"
-            onClick={toggleDrawer(anchor, false)}
+            // onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
         >
+            <div className="language">
+                <GoGlobe size={22} className="language__globe-icon" />
+                <FormControl fullWidth className="language__select">
+                    <NativeSelect
+                        defaultValue={30}
+                        inputProps={{
+                            name: 'age',
+                            id: 'uncontrolled-native',
+                        }}
+                    >
+                        <option value={10}>Ten</option>
+                        <option value={20}>Twenty</option>
+                        <option value={30}>Thirty</option>
+                    </NativeSelect>
+                </FormControl>
+                <VscClose
+                    size={28}
+                    color="#333333"
+                    style={{
+                        position: 'absolute',
+                        right: '10px',
+                        top: '10px',
+                    }}
+                />
+            </div>
             <List>
                 {['Inbox', 'Starred', 'Send email', 'Drafts'].map(
                     (text, index) => (
@@ -86,7 +116,7 @@ const Menu = () => {
                 open={state['left']}
                 onClose={toggleDrawer('left', false)}
                 sx={{
-                    height: '100%',
+                    backdropFilter: 'blur(10px)',
                 }}
                 className="menu-drawer"
             >
