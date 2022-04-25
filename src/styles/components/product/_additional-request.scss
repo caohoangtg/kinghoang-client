@@ -1,0 +1,24 @@
+.additional-request {
+    padding-top: 5px;
+
+    .additional-request__input {
+        width: 100%;
+        color: var(--color-main);
+
+        label {
+            display: flex;
+            color: var(--color-main);
+            font-size: 14px;
+            font-weight: bold;
+
+            svg {
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .MuiInput-root::before,
+    .MuiInput-root::after {
+        border-bottom-color: var(--color-main);
+    }
+}

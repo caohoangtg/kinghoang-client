@@ -17,6 +17,7 @@ import IconButton from '@mui/material/IconButton'
 import { Modifier } from '../modifier'
 import { Variant } from '../variant'
 import Button from '@mui/material/Button'
+import AdditionalRequest from './AdditionalRequest'
 
 const drawerBleeding = 56
 
@@ -155,6 +156,7 @@ const ProductToCart = (props: Props) => {
                             <Modifier />
                             <Modifier />
                             <Modifier />
+                            <AdditionalRequest />
                         </div>
                     </StyledBox>
 
