@@ -1,1 +1,2 @@
-export { default as Cart } from './Cart'
+export { default as CartDetail } from './CartDetail'
+export { default as CartAlert } from './CartAlert'

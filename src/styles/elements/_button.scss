@@ -1,4 +1,5 @@
 .button-add {
+    font-family: var(--font-family);
     background: var(--color-main);
     border-radius: 15px;
     width: 100px;
@@ -6,5 +7,5 @@
     border: none;
     color: #ffffff;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
 }

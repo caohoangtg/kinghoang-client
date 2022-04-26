@@ -1,0 +1,36 @@
+.cart {
+    padding: 5px 15px;
+
+    .cart-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+
+        .cart-header__title {
+            flex-grow: 1;
+
+            h5 {
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 19px;
+                color: var(--color-main);
+            }
+
+            .cart-header__items-added {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 19px;
+                color: #333333;
+            }
+        }
+
+        .cart-header__clear-all {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 19px;
+            text-align: right;
+            color: #e61d2b;
+        }
+    }
+}

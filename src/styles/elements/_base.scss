@@ -1,9 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 
+:root {
+    --color-main: #f05223 !important;
+    --color-main-light: #fff2ee !important;
+    --color-main-dark: #f6f6f6 !important;
+    --color-main-text: #333333 !important;
+    --color-sub-text: #333333 !important;
+    --color-background-item: #ffffff !important;
+    --font-family: 'Nunito Sans', sans-serif !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Nunito Sans', sans-serif !important;
     color: var(--color-main-text);
-    background-color: var(--color-main);
 }
 
 .d-flex {

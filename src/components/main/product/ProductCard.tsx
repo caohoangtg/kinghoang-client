@@ -13,9 +13,12 @@ const ProductCard = () => {
             <div className="product-card__content">
                 <div className="line-horizontal"></div>
                 <p className="product-card__price">S$11.80</p>
-                <p className="product-card__name">
-                    Carbonara with Sous Vide Egg
-                </p>
+                <p className="product-card__name">Deshelled Chilli King Crab</p>
+                {/* <p className="product-card__description">
+                        This half-portioned king crab dish is bursting with bold
+                        flavours! This half-portioned king crab dish is bursting
+                        with bold flavours!
+                    </p> */}
             </div>
             <div className="product-card__action">
                 <button

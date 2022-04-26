@@ -11,6 +11,7 @@ const AppRouter = () => (
     <Router>
         <Routes>
             <Route element={<view.Home />} path={ROUTES.HOME} />
+            <Route element={<view.Cart />} path={ROUTES.CART} />
             <Route element={<view.ViewProduct />} path={ROUTES.VIEW_PRODUCT} />
         </Routes>
     </Router>
