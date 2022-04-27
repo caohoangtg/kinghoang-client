@@ -12,14 +12,16 @@ import 'swiper/css/free-mode'
 import 'swiper/css/pagination'
 import { ProductCard } from '../product'
 import { AiOutlineRight } from 'react-icons/ai'
+import { FaArrowCircleRight } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const Recommended = () => {
-    const pagination = {
-        clickable: true,
-        renderBullet: function (index: number, className: string) {
-            return `<span class="${className} custom-dot"></span>`
-        },
-    }
+    // const pagination = {
+    //     clickable: true,
+    //     renderBullet: function (index: number, className: string) {
+    //         return `<span class="${className} custom-dot"></span>`
+    //     },
+    // }
 
     return (
         <div className="recommended">
@@ -31,9 +33,9 @@ const Recommended = () => {
             </div>
             <Swiper
                 modules={[FreeMode, Pagination]}
-                slidesPerView={2.4}
+                slidesPerView={2.6}
                 freeMode={true}
-                pagination={pagination}
+                //pagination={pagination}
                 spaceBetween={15}
                 scrollbar={{
                     hide: true,
@@ -61,13 +63,20 @@ const Recommended = () => {
                     <ProductCard />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <ProductCard />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <ProductCard />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <ProductCard />
+                    <div className="product-card product-card__see-more">
+                        <div className="product-card__see-more-box">
+                            <Link
+                                to="/recommended"
+                                className="product-card__see-more-link"
+                            >
+                                <FaArrowCircleRight
+                                    color="var(--color-main)"
+                                    size={34}
+                                />
+                                <div>See more</div>
+                            </Link>
+                        </div>
+                    </div>
                 </SwiperSlide>
             </Swiper>
         </div>

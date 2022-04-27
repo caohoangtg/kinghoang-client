@@ -32,6 +32,18 @@
 
     .recommended__swiper {
         padding-bottom: 40px;
+        margin-left: -16px;
+        margin-right: -16px;
+
+        .swiper-wrapper {
+            .swiper-slide:first-child {
+                margin-left: 16px;
+            }
+
+            // .swiper-slide:last-child {
+            //     margin-right: 32px;
+            // }
+        }
     }
 
     .custom-dot {
