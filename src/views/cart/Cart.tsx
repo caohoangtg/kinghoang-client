@@ -2,6 +2,11 @@ import React from 'react'
 import { VscClose } from 'react-icons/vsc'
 import '../../styles/components/_cart.scss'
 import { Link } from 'react-router-dom'
+import IconButton from '@mui/material/IconButton'
+import { FaTrashAlt } from 'react-icons/fa'
+import { AiFillEdit } from 'react-icons/ai'
+import { IoIosRemoveCircleOutline, IoIosAddCircle } from 'react-icons/io'
+import { AdditionalRequest } from '../../components/main'
 
 const Cart = () => {
     return (
@@ -26,11 +31,25 @@ const Cart = () => {
                     </div>
                     <div className="cart-body-item">
                         <div className="cart-body-item__card">
-                            <div className="cart-body-item__image">Image</div>
+                            <div className="cart-body-item__media">
+                                <img
+                                    className="cart-body-item__img"
+                                    src="./images/Cart-1.png"
+                                    alt="product"
+                                />
+                                <div className="cart-body-item__edit">Edit</div>
+                            </div>
                             <div className="cart-body-item__content">
-                                <div className="cart-body-item__name">
-                                    <div>Homemade Prawn Roll 3</div>
-                                    <div>Remove</div>
+                                <div className="cart-body-item__title">
+                                    <div className="cart-body-item__name">
+                                        Homemade Prawn Roll 3 Prawn Roll 3 Prawn
+                                        Roll 3 Prawn Roll 3 Roll 3 Prawn Roll 3
+                                    </div>
+                                    <FaTrashAlt
+                                        size={18}
+                                        color="#888888"
+                                        className="cart-body-item__icon-trash"
+                                    />
                                 </div>
                                 <div className="cart-body-item__modifier">
                                     <div className="cart-body-item__modifier-item">
@@ -40,20 +59,179 @@ const Cart = () => {
                                         1 x Cod Fish
                                     </div>
                                     <div className="cart-body-item__less-spicy">
+                                        <AiFillEdit size={18} color="#888888" />
                                         Less Spicy
                                     </div>
                                 </div>
                                 <div className="cart-body-item__action">
                                     <div className="cart-body-item__option">
-                                        <div className="cart-body-item__remove">
-                                            -
-                                        </div>
-                                        <div className="cart-body-item__quality">
+                                        <IconButton
+                                            className="color-icon cart-body-item__remove"
+                                            aria-label="remove from cart"
+                                        >
+                                            <IoIosRemoveCircleOutline
+                                                size={40}
+                                            />
+                                        </IconButton>
+                                        <span className="cart-body-item__quality">
                                             1
-                                        </div>
-                                        <div className="cart-body-item__add">
-                                            +
-                                        </div>
+                                        </span>
+                                        <IconButton
+                                            className="color-icon cart-body-item__add"
+                                            aria-label="add to cart"
+                                        >
+                                            <IoIosAddCircle size={40} />
+                                        </IconButton>
+                                    </div>
+                                    <div className="cart-body-item__price">
+                                        S$14.00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="cart-body-item__card">
+                            <div className="cart-body-item__media">
+                                <img
+                                    className="cart-body-item__img"
+                                    src="./images/Cart-1.png"
+                                    alt="product"
+                                />
+                                <div className="cart-body-item__edit">Edit</div>
+                            </div>
+                            <div className="cart-body-item__content">
+                                <div className="cart-body-item__title">
+                                    <div className="cart-body-item__name">
+                                        Homemade Prawn Roll 3
+                                    </div>
+                                    <FaTrashAlt
+                                        size={18}
+                                        color="#888888"
+                                        className="cart-body-item__icon-trash"
+                                    />
+                                </div>
+                                <div className="cart-body-item__action">
+                                    <div className="cart-body-item__option">
+                                        <IconButton
+                                            className="color-icon cart-body-item__remove"
+                                            aria-label="remove from cart"
+                                        >
+                                            <IoIosRemoveCircleOutline
+                                                size={40}
+                                            />
+                                        </IconButton>
+                                        <span className="cart-body-item__quality">
+                                            1
+                                        </span>
+                                        <IconButton
+                                            className="color-icon cart-body-item__add"
+                                            aria-label="add to cart"
+                                        >
+                                            <IoIosAddCircle size={40} />
+                                        </IconButton>
+                                    </div>
+                                    <div className="cart-body-item__price">
+                                        S$14.00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="cart-body-item__card">
+                            <div className="cart-body-item__media">
+                                <img
+                                    className="cart-body-item__img"
+                                    src="./images/Cart-1.png"
+                                    alt="product"
+                                />
+                                <div className="cart-body-item__edit">Edit</div>
+                            </div>
+                            <div className="cart-body-item__content">
+                                <div className="cart-body-item__title">
+                                    <div className="cart-body-item__name">
+                                        Homemade Prawn Roll 3
+                                    </div>
+                                    <FaTrashAlt
+                                        size={18}
+                                        color="#888888"
+                                        className="cart-body-item__icon-trash"
+                                    />
+                                </div>
+                                <div className="cart-body-item__action">
+                                    <div className="cart-body-item__option">
+                                        <IconButton
+                                            className="color-icon cart-body-item__remove"
+                                            aria-label="remove from cart"
+                                        >
+                                            <IoIosRemoveCircleOutline
+                                                size={40}
+                                            />
+                                        </IconButton>
+                                        <span className="cart-body-item__quality">
+                                            1
+                                        </span>
+                                        <IconButton
+                                            className="color-icon cart-body-item__add"
+                                            aria-label="add to cart"
+                                        >
+                                            <IoIosAddCircle size={40} />
+                                        </IconButton>
+                                    </div>
+                                    <div className="cart-body-item__price">
+                                        S$14.00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="cart-body-item__card">
+                            <div className="cart-body-item__media">
+                                <img
+                                    className="cart-body-item__img"
+                                    src="./images/Cart-1.png"
+                                    alt="product"
+                                />
+                                <div className="cart-body-item__edit">Edit</div>
+                            </div>
+                            <div className="cart-body-item__content">
+                                <div className="cart-body-item__title">
+                                    <div className="cart-body-item__name">
+                                        Homemade Prawn Roll 3
+                                    </div>
+                                    <FaTrashAlt
+                                        size={18}
+                                        color="#888888"
+                                        className="cart-body-item__icon-trash"
+                                    />
+                                </div>
+                                <div className="cart-body-item__modifier">
+                                    <div className="cart-body-item__modifier-item">
+                                        2 x Chicken
+                                    </div>
+                                    <div className="cart-body-item__modifier-item">
+                                        1 x Cod Fish
+                                    </div>
+                                    <div className="cart-body-item__less-spicy">
+                                        <AiFillEdit size={18} color="#888888" />
+                                        Less Spicy
+                                    </div>
+                                </div>
+                                <div className="cart-body-item__action">
+                                    <div className="cart-body-item__option">
+                                        <IconButton
+                                            className="color-icon cart-body-item__remove"
+                                            aria-label="remove from cart"
+                                        >
+                                            <IoIosRemoveCircleOutline
+                                                size={40}
+                                            />
+                                        </IconButton>
+                                        <span className="cart-body-item__quality">
+                                            1
+                                        </span>
+                                        <IconButton
+                                            className="color-icon cart-body-item__add"
+                                            aria-label="add to cart"
+                                        >
+                                            <IoIosAddCircle size={40} />
+                                        </IconButton>
                                     </div>
                                     <div className="cart-body-item__price">
                                         S$14.00
@@ -95,11 +273,11 @@ const Cart = () => {
                         </div>
                     </div>
                     <div className="cart-body-note">
-                        <div className="cart-body-note__title">
+                        {/* <div className="cart-body-note__title">
                             Note to store
-                        </div>
+                        </div> */}
                         <div className="cart-body-note__additional-request">
-                            Additional request
+                            <AdditionalRequest />
                         </div>
                     </div>
                 </div>

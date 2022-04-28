@@ -4,16 +4,21 @@ import Drawer from '@mui/material/Drawer'
 import List from '@mui/material/List'
 import Divider from '@mui/material/Divider'
 import ListItem from '@mui/material/ListItem'
-import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
-import { MdMoveToInbox, MdMail } from 'react-icons/md'
-
 import { GiHamburgerMenu } from 'react-icons/gi'
-import { VscClose } from 'react-icons/vsc'
-import { GoGlobe } from 'react-icons/go'
-
-import NativeSelect from '@mui/material/NativeSelect'
+import { FaUserCircle } from 'react-icons/fa'
+import MenuItem from '@mui/material/MenuItem'
 import FormControl from '@mui/material/FormControl'
+import Select from '@mui/material/Select'
+import Button from '@mui/material/Button'
+import { VscClose } from 'react-icons/vsc'
+import {
+    FcGoogle,
+    FcStart,
+    FcRating,
+    FcSteam,
+    FcWikipedia,
+} from 'react-icons/fc'
 
 type Anchor = 'left'
 
@@ -45,62 +50,90 @@ const Menu = () => {
                 width: 300,
                 height: '100%',
             }}
+            className="menu-drawer__box"
             role="presentation"
-            // onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
         >
-            <div className="language">
-                <GoGlobe size={22} className="language__globe-icon" />
-                <FormControl fullWidth className="language__select">
-                    <NativeSelect
-                        defaultValue={30}
-                        inputProps={{
-                            name: 'age',
-                            id: 'uncontrolled-native',
-                        }}
-                    >
-                        <option value={10}>Ten</option>
-                        <option value={20}>Twenty</option>
-                        <option value={30}>Thirty</option>
-                    </NativeSelect>
-                </FormControl>
-                <VscClose
-                    size={28}
-                    color="#333333"
-                    style={{
-                        position: 'absolute',
-                        right: '10px',
-                        top: '10px',
-                    }}
+            <Button
+                onClick={toggleDrawer(anchor, false)}
+                className="menu-drawer__close"
+            >
+                <VscClose size={36} color="#333333" />
+            </Button>
+            <div className="merchant-brand">
+                <img
+                    className="merchant-brand__avatar"
+                    alt="Remy Sharp"
+                    src="/images/18-Chef.png"
                 />
+                <div className="merchant-brand__name">
+                    Eighteen Chefs @ Bugis Junction
+                </div>
             </div>
-            <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map(
-                    (text, index) => (
-                        <ListItem button key={text}>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? (
-                                    <MdMoveToInbox />
-                                ) : (
-                                    <MdMail />
-                                )}
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItem>
-                    )
-                )}
-            </List>
-            <Divider />
-            <List>
-                {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>
-                            {index % 2 === 0 ? <MdMoveToInbox /> : <MdMail />}
-                        </ListItemIcon>
-                        <ListItemText primary={text} />
+            <div>
+                <List>
+                    <ListItem button key={'Home'}>
+                        <ListItemText
+                            primary={'Home'}
+                            className="menu-drawer__item active"
+                        />
                     </ListItem>
-                ))}
-            </List>
+                    <ListItem button key={'Recommended'}>
+                        <ListItemText
+                            primary={'Recommended'}
+                            className="menu-drawer__item"
+                        />
+                    </ListItem>
+                    <ListItem button key={'Menu'}>
+                        <ListItemText
+                            primary={'Menu'}
+                            className="menu-drawer__item"
+                        />
+                    </ListItem>
+                </List>
+                <Divider className="menu-drawer__divider" />
+                <List>
+                    {['About Us', 'Location & Hours', 'Reviews'].map((text) => (
+                        <ListItem button key={text}>
+                            <ListItemText
+                                primary={text}
+                                className="menu-drawer__item"
+                            />
+                        </ListItem>
+                    ))}
+                </List>
+            </div>
+
+            <div className="menu-drawer__user">
+                <FaUserCircle size={34} />
+                <div>Log In / Sign Up</div>
+            </div>
+
+            <div className="menu-drawer__contac-us">
+                <div className="menu-drawer__language">
+                    <div>Language</div>
+                    <div className="menu-drawer__language-select">
+                        <FormControl
+                            fullWidth
+                            variant="standard"
+                            sx={{ minWidth: 120 }}
+                        >
+                            <Select id="language-code" value={10} label="Age">
+                                <MenuItem value={10}>English</MenuItem>
+                                <MenuItem value={20}>China</MenuItem>
+                                <MenuItem value={30}>Viet Nam</MenuItem>
+                            </Select>
+                        </FormControl>
+                    </div>
+                </div>
+                <div className="menu-drawer__social-network">
+                    <FcGoogle size={38} />
+                    <FcStart size={38} />
+                    <FcRating size={38} />
+                    <FcSteam size={38} />
+                    <FcWikipedia size={38} />
+                </div>
+            </div>
         </Box>
     )
 

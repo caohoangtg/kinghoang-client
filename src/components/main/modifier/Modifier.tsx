@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { BsCaretUpFill, BsCaretDownFill } from 'react-icons/bs'
 import Collapse from '@mui/material/Collapse'
-import { IoIosRemoveCircle, IoIosAddCircle } from 'react-icons/io'
+import { IoIosRemoveCircleOutline, IoIosAddCircle } from 'react-icons/io'
 import IconButton from '@mui/material/IconButton'
 
 const Modifier = () => {
@@ -40,7 +40,7 @@ const Modifier = () => {
                                     className="color-icon"
                                     aria-label="remove from cart"
                                 >
-                                    <IoIosRemoveCircle size={40} />
+                                    <IoIosRemoveCircleOutline size={40} />
                                 </IconButton>
                                 <span>1</span>
                                 <IconButton
@@ -59,7 +59,7 @@ const Modifier = () => {
                                     className="color-icon"
                                     aria-label="remove from cart"
                                 >
-                                    <IoIosRemoveCircle size={40} />
+                                    <IoIosRemoveCircleOutline size={40} />
                                 </IconButton>
                                 <span>1</span>
                                 <IconButton
@@ -78,7 +78,7 @@ const Modifier = () => {
                                     className="color-icon"
                                     aria-label="remove from cart"
                                 >
-                                    <IoIosRemoveCircle size={40} />
+                                    <IoIosRemoveCircleOutline size={40} />
                                 </IconButton>
                                 <span>1</span>
                                 <IconButton

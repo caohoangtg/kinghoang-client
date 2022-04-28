@@ -1,0 +1,101 @@
+.menu-drawer {
+    position: relative;
+
+    .menu-drawer__close {
+        position: absolute;
+        top: 10px;
+        right: 0;
+    }
+
+    .menu-drawer__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 15px;
+    }
+
+    .merchant-brand {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 15px;
+    }
+
+    .merchant-brand__name {
+        color: var(--color-main-text);
+        font-size: 0.875rem;
+        font-weight: 800;
+        padding-top: 10px;
+    }
+
+    .menu-drawer__item {
+        font-size: 16px;
+        line-height: 22px;
+        display: flex;
+        align-items: center;
+        color: #333333;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        &.active {
+            color: var(--color-main);
+
+            * {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .menu-drawer__divider {
+        background-color: var(--color-main);
+        border-color: var(--color-main);
+    }
+
+    .menu-drawer__user {
+        background: #f05223;
+        box-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
+        border-radius: 25px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 27px;
+        display: flex;
+        text-align: center;
+        color: #ffffff;
+        width: 235px;
+        height: 50px;
+        justify-content: space-around;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .menu-drawer__language {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        line-height: 19px;
+        color: #333333;
+        border-bottom: 1px solid var(--color-main);
+        padding-bottom: 5px;
+    }
+
+    .menu-drawer__social-network {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 15px;
+    }
+
+    .menu-drawer__language-select {
+        .MuiInput-root {
+            &::after,
+            &::before {
+                content: none;
+            }
+
+            .MuiInput-input:focus {
+                background-color: transparent;
+            }
+        }
+    }
+}

@@ -11,7 +11,7 @@ import SwipeableDrawer from '@mui/material/SwipeableDrawer'
 import Typography from '@mui/material/Typography'
 
 import { VscClose } from 'react-icons/vsc'
-import { IoIosRemoveCircle, IoIosAddCircle } from 'react-icons/io'
+import { IoIosRemoveCircleOutline, IoIosAddCircle } from 'react-icons/io'
 import ProductImage from './ProductImage'
 import IconButton from '@mui/material/IconButton'
 import { Modifier } from '../modifier'
@@ -166,7 +166,7 @@ const ProductToCart = (props: Props) => {
                                 className="color-icon"
                                 aria-label="remove from cart"
                             >
-                                <IoIosRemoveCircle size={40} />
+                                <IoIosRemoveCircleOutline size={40} />
                             </IconButton>
                             <span>1</span>
                             <IconButton
