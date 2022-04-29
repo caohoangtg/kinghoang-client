@@ -8,6 +8,8 @@
 @import './components/layout/_footer.scss';
 @import './components/layout/_menu.scss';
 
+@import './components/layout/_order-header.scss';
+
 @import './components/banner/_banner.scss';
 
 @import './components/recommended/_recommended.scss';
@@ -20,5 +22,7 @@
 @import './components/category/_category-tab.scss';
 
 @import './components/modifier/_modifier.scss';
+@import './components/modifier/_modifier-item.scss';
 
 @import './components/variant/_variant.scss';
+@import './components/variant/_variant-item.scss';

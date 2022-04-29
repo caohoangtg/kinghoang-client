@@ -1,0 +1,220 @@
+.order-progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .vertical {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        .order-progress__step {
+            position: relative;
+            padding: 10px;
+            height: 80px;
+            display: flex;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: -35px;
+                transform: translateY(-50%);
+                width: 20px;
+                height: 20px;
+                border: 2px solid #cccccc;
+                border-radius: 50%;
+                background-color: #ffffff;
+                z-index: 2;
+            }
+
+            &:not(:first-child)::after {
+                content: '';
+                position: absolute;
+                top: -44%;
+                left: -25px;
+                height: 100%;
+                border-left: 4px dashed #cccccc;
+            }
+
+            .order-progress__box {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+            }
+
+            .order-progress__icon {
+                background: #333333;
+                padding: 10px;
+                color: #ffffff;
+            }
+
+            .order-progress__content {
+                padding: 15px;
+                flex-grow: 1;
+
+                .order-progress__title {
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 25px;
+                    color: #737373;
+                }
+
+                .order-progress__msg {
+                    font-size: 14px;
+                    line-height: 19px;
+                    color: #737373;
+                }
+            }
+
+            &.active {
+                &::before {
+                    left: -40px;
+                    width: 30px;
+                    height: 30px;
+                    border: 2px solid var(--color-main);
+                    background-color: var(--color-main);
+                }
+
+                &:not(:first-child)::after {
+                    border-left: 4px dashed var(--color-main);
+                }
+
+                .order-progress__icon {
+                    background: #333333;
+                }
+
+                .order-progress__content {
+                    .order-progress__title,
+                    .order-progress__msg {
+                        color: #333333;
+                    }
+                }
+
+                &.current-status {
+                    &::before {
+                        left: -40px;
+                        width: 30px;
+                        height: 30px;
+                        border: 2px solid red;
+                        background-color: red;
+                    }
+
+                    .order-progress__content {
+                        .order-progress__title {
+                            color: var(--color-main);
+                        }
+                        .order-progress__msg {
+                            color: #333333;
+                        }
+                    }
+
+                    .order-progress__icon {
+                        background: var(--color-main);
+                    }
+                }
+            }
+        }
+    }
+
+    .horizontal {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        .order-progress__step {
+            position: relative;
+            padding: 10px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: -35px;
+                transform: translateY(-50%);
+                width: 20px;
+                height: 20px;
+                border: 2px solid #cccccc;
+                border-radius: 50%;
+                background-color: #ffffff;
+                z-index: 2;
+            }
+
+            &:not(:first-child)::after {
+                content: '';
+                position: absolute;
+                top: -44%;
+                left: -25px;
+                height: 100%;
+                border-left: 4px dashed #cccccc;
+            }
+
+            .order-progress__box {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+            }
+
+            .order-progress__icon {
+                background: #333333;
+                padding: 10px;
+                color: #ffffff;
+            }
+
+            .order-progress__content {
+                padding: 15px;
+                flex-grow: 1;
+
+                .order-progress__title {
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 25px;
+                    color: #737373;
+                }
+
+                .order-progress__msg {
+                    font-size: 14px;
+                    line-height: 19px;
+                    color: #737373;
+                }
+            }
+
+            &.active {
+                &::before {
+                    left: -40px;
+                    width: 30px;
+                    height: 30px;
+                    border: 2px solid var(--color-main);
+                    background-color: var(--color-main);
+                }
+
+                &:not(:first-child)::after {
+                    border-left: 4px dashed var(--color-main);
+                }
+
+                .order-progress__icon {
+                    background: var(--color-main);
+                }
+
+                .order-progress__content {
+                    .order-progress__title {
+                        color: var(--color-main);
+                    }
+                    .order-progress__msg {
+                        color: #333333;
+                    }
+                }
+
+                &.current-status {
+                    &::before {
+                        left: -40px;
+                        width: 30px;
+                        height: 30px;
+                        border: 2px solid var(--color-main-text);
+                        background-color: var(--color-main-text);
+                    }
+                }
+            }
+        }
+    }
+}

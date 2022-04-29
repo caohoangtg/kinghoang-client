@@ -214,8 +214,11 @@
                 line-height: 19px;
                 padding-top: 5px;
                 align-items: center;
-
                 color: #333333;
+
+                .cart-body-ps__item-price {
+                    font-weight: bold;
+                }
             }
         }
 
@@ -286,14 +289,18 @@
             border-radius: 20px;
             width: 170px;
             height: 40px;
-            font-weight: 700;
-            font-size: 14px;
-            line-height: 19px;
-            text-align: center;
-            color: #ffffff;
             align-items: center;
             display: flex;
             justify-content: center;
+
+            a {
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 19px;
+                text-align: center;
+                color: #ffffff;
+                text-decoration: none;
+            }
         }
     }
 }

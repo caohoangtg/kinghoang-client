@@ -288,7 +288,9 @@ const Cart = () => {
                             SGD 94.37
                         </div>
                     </div>
-                    <div className="cart-footer__checkout">CHECKOUT</div>
+                    <div className="cart-footer__checkout">
+                        <Link to="/order">CHECKOUT</Link>
+                    </div>
                 </div>
             </div>
         </React.Fragment>

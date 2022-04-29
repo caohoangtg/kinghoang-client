@@ -13,6 +13,20 @@ const AppRouter = () => (
             <Route element={<view.Home />} path={ROUTES.HOME} />
             <Route element={<view.Cart />} path={ROUTES.CART} />
             <Route element={<view.Recommended />} path={ROUTES.RECOMMENDED} />
+            <Route element={<view.Category />} path={ROUTES.CATEGORY} />
+            <Route element={<view.Order />} path={ROUTES.ORDER} />
+            <Route
+                element={<view.OrderTracker />}
+                path={ROUTES.ORDER_TRACKER}
+            />
+            <Route
+                element={<view.PaymentReceipt />}
+                path={ROUTES.PAYMENT_RECEIPT}
+            />
+            <Route
+                element={<view.MemberRegistration />}
+                path={ROUTES.MEMBER_REGISTRATION}
+            />
             <Route element={<view.ViewProduct />} path={ROUTES.VIEW_PRODUCT} />
         </Routes>
     </Router>

@@ -19,6 +19,7 @@ import {
     FcSteam,
     FcWikipedia,
 } from 'react-icons/fc'
+import { Link } from 'react-router-dom'
 
 type Anchor = 'left'
 
@@ -85,10 +86,12 @@ const Menu = () => {
                         />
                     </ListItem>
                     <ListItem button key={'Menu'}>
-                        <ListItemText
-                            primary={'Menu'}
-                            className="menu-drawer__item"
-                        />
+                        <Link to="/category">
+                            <ListItemText
+                                primary={'Menu'}
+                                className="menu-drawer__item"
+                            />
+                        </Link>
                     </ListItem>
                 </List>
                 <Divider className="menu-drawer__divider" />

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { BsCaretUpFill, BsCaretDownFill } from 'react-icons/bs'
-import Radio from '@mui/material/Radio'
 import Collapse from '@mui/material/Collapse'
+import VariantItem from './VariantItem'
 
 const Variant = () => {
     const [selectedValue, setSelectedValue] = useState('0')
@@ -43,54 +43,18 @@ const Variant = () => {
             </div>
             <Collapse in={checked}>
                 <div className="variant__box">
-                    <div className="variant__error-message">
-                        Please select 1
-                    </div>
                     <div className="variant__content">
-                        <div className="variant__item">
+                        <VariantItem controlProps={controlProps('0')} />
+                        <VariantItem controlProps={controlProps('1')} />
+                        <VariantItem controlProps={controlProps('2')} />
+                        <VariantItem controlProps={controlProps('3')} />
+
+                        {/* <div className="variant-item">
                             <span>500g</span>
                             <span>+S$15.00</span>
                             <div>
                                 <Radio
-                                    className="variant__radio"
-                                    {...controlProps('0')}
-                                    sx={{
-                                        color: 'var(--color-main)',
-                                        '&.Mui-checked': {
-                                            color: 'var(--color-main)',
-                                        },
-                                        '& .MuiSvgIcon-root': {
-                                            fontSize: 36,
-                                        },
-                                    }}
-                                />
-                            </div>
-                        </div>
-                        <div className="variant__item">
-                            <span>500g</span>
-                            <span>+S$15.00</span>
-                            <div>
-                                <Radio
-                                    className="variant__radio"
-                                    {...controlProps('1')}
-                                    sx={{
-                                        color: 'var(--color-main)',
-                                        '&.Mui-checked': {
-                                            color: 'var(--color-main)',
-                                        },
-                                        '& .MuiSvgIcon-root': {
-                                            fontSize: 36,
-                                        },
-                                    }}
-                                />
-                            </div>
-                        </div>
-                        <div className="variant__item">
-                            <span>500g</span>
-                            <span>+S$15.00</span>
-                            <div>
-                                <Radio
-                                    className="variant__radio"
+                                    className="variant-item__radio"
                                     {...controlProps('2')}
                                     sx={{
                                         color: 'var(--color-main)',
@@ -103,7 +67,7 @@ const Variant = () => {
                                     }}
                                 />
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </Collapse>

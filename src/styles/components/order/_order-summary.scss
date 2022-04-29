@@ -1,0 +1,22 @@
+.order-summary {
+    position: relative;
+    padding-bottom: 10px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 15px;
+        right: 15px;
+        border-bottom: 1px solid #ebebeb;
+    }
+
+    .order-summary__title {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--color-main);
+        padding-top: 5px;
+        padding-bottom: 10px;
+    }
+}

@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { BsCaretUpFill, BsCaretDownFill } from 'react-icons/bs'
 import Collapse from '@mui/material/Collapse'
-import { IoIosRemoveCircleOutline, IoIosAddCircle } from 'react-icons/io'
-import IconButton from '@mui/material/IconButton'
+import ModifierItem from './ModifierItem'
 
 const Modifier = () => {
     const [checked, setChecked] = useState(true)
@@ -32,63 +31,9 @@ const Modifier = () => {
                         Please select 1
                     </div>
                     <div className="modifier__content">
-                        <div className="modifier__item">
-                            <div>500g</div>
-                            <div>+S$15.00</div>
-                            <div className="modifier__quality">
-                                <IconButton
-                                    className="color-icon"
-                                    aria-label="remove from cart"
-                                >
-                                    <IoIosRemoveCircleOutline size={40} />
-                                </IconButton>
-                                <span>1</span>
-                                <IconButton
-                                    className="color-icon"
-                                    aria-label="add to cart"
-                                >
-                                    <IoIosAddCircle size={40} />
-                                </IconButton>
-                            </div>
-                        </div>
-                        <div className="modifier__item">
-                            <div>500g</div>
-                            <div>+S$15.00</div>
-                            <div className="modifier__quality">
-                                <IconButton
-                                    className="color-icon"
-                                    aria-label="remove from cart"
-                                >
-                                    <IoIosRemoveCircleOutline size={40} />
-                                </IconButton>
-                                <span>1</span>
-                                <IconButton
-                                    className="color-icon"
-                                    aria-label="add to cart"
-                                >
-                                    <IoIosAddCircle size={40} />
-                                </IconButton>
-                            </div>
-                        </div>
-                        <div className="modifier__item">
-                            <div>500g</div>
-                            <div>+S$15.00</div>
-                            <div className="modifier__quality">
-                                <IconButton
-                                    className="color-icon"
-                                    aria-label="remove from cart"
-                                >
-                                    <IoIosRemoveCircleOutline size={40} />
-                                </IconButton>
-                                <span>1</span>
-                                <IconButton
-                                    className="color-icon"
-                                    aria-label="add to cart"
-                                >
-                                    <IoIosAddCircle size={40} />
-                                </IconButton>
-                            </div>
-                        </div>
+                        <ModifierItem />
+                        <ModifierItem />
+                        <ModifierItem />
                     </div>
                 </div>
             </Collapse>

@@ -32,17 +32,4 @@
         padding-top: 15px;
         padding-bottom: 15px;
     }
-
-    .variant__content {
-        .variant__item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #ebebeb;
-
-            .variant__radio {
-                color: var(--color-main);
-            }
-        }
-    }
 }
