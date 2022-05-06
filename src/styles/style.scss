@@ -1,5 +1,7 @@
 @import './elements/_base.scss';
 @import './elements/_button.scss';
+@import './elements/_input.scss';
+@import './elements/_label.scss';
 @import './elements/_icon.scss';
 
 @import './components/_home.scss';
@@ -7,6 +9,7 @@
 @import './components/layout/_header.scss';
 @import './components/layout/_footer.scss';
 @import './components/layout/_menu.scss';
+@import './components/modals/_dinein-modal.scss';
 
 @import './components/layout/_order-header.scss';
 

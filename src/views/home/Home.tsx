@@ -6,16 +6,14 @@ import {
     Recommended,
     CategoryTab,
 } from '../../components/main'
-
-import CssBaseline from '@mui/material/CssBaseline'
 import Container from '@mui/material/Container'
+import { DineInModal } from '../../components/common'
 // import ProductToCart from '../../components/main/product/ProductToCart'
 
 const Home = () => {
     return (
         <React.Fragment>
             <div className="home-page">
-                <CssBaseline />
                 <Header />
                 <main className="home-page__main">
                     <HeaderBanner />
@@ -30,6 +28,8 @@ const Home = () => {
                 </main>
                 <Footer />
             </div>
+            <div id="main"></div>
+            <DineInModal />
         </React.Fragment>
     )
 }
