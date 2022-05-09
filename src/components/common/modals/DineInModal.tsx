@@ -2,22 +2,11 @@ import React from 'react'
 import Modal from 'react-modal'
 import { FaArrowCircleLeft, FaAngleDoubleRight } from 'react-icons/fa'
 
-const customStyles = {
-    content: {
-        top: '50%',
-        left: '50%',
-        right: 'auto',
-        bottom: 'auto',
-        marginRight: '-50%',
-        transform: 'translate(-50%, -50%)',
-    },
-}
-
 // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
-Modal.setAppElement(document.getElementById('main') as HTMLElement)
+Modal.setAppElement(document.getElementById('root') as HTMLElement)
 
 const DineInModal = () => {
-    const [modalIsOpen, setIsOpen] = React.useState(true)
+    const [modalIsOpen, setIsOpen] = React.useState(false)
     const [isPax, setIsPax] = React.useState(true)
 
     // function openModal() {
@@ -39,7 +28,7 @@ const DineInModal = () => {
                 isOpen={modalIsOpen}
                 //onAfterOpen={afterOpenModal}
                 //onRequestClose={closeModal}
-                style={customStyles}
+                //style={customStyles}
                 ariaHideApp={false}
                 contentLabel="Dine-In Modal"
                 portalClassName="dinein-modal"
@@ -66,8 +55,8 @@ const DineInModal = () => {
 
                     <form className="dinein-modal__form">
                         <div
-                            className={`dinein-modal__pax-form ${
-                                isPax || 'order-now-step'
+                            className={`dinein-modal__pax-form${
+                                isPax === false ? ' order-now-step' : ''
                             }`}
                         >
                             <div className="dinein-modal__form-input">
@@ -96,8 +85,8 @@ const DineInModal = () => {
                             </button>
                         </div>
                         <div
-                            className={`dinein-modal__name-form ${
-                                isPax || 'order-now-step'
+                            className={`dinein-modal__name-form${
+                                isPax === false ? ' order-now-step' : ''
                             }`}
                         >
                             <div className="dinein-modal__form-input">

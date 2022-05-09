@@ -1,0 +1,31 @@
+.cart-note {
+    position: relative;
+    padding-top: 5px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -15px;
+        right: -15px;
+        border-top: 1px solid #e5e5e5;
+    }
+
+    .cart-note__title {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        color: #888888;
+        margin-bottom: 5px;
+    }
+
+    // .cart-note__additional-request {
+    //     display: flex;
+    //     justify-content: space-between;
+    //     font-size: 14px;
+    //     line-height: 19px;
+    //     padding-top: 5px;
+    //     align-items: center;
+    //     color: #333333;
+    // }
+}

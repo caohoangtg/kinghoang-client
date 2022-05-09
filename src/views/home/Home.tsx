@@ -28,7 +28,6 @@ const Home = () => {
                 </main>
                 <Footer />
             </div>
-            <div id="main"></div>
             <DineInModal />
         </React.Fragment>
     )

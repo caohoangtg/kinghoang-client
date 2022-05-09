@@ -132,6 +132,7 @@
         .product-linear__action {
             display: flex;
             margin-top: 25px;
+            flex-wrap: wrap;
 
             .product-linear__price {
                 flex-grow: 1;

@@ -12,6 +12,7 @@
         flex-direction: column;
         justify-content: space-around;
         padding: 15px;
+        width: 100%;
     }
 
     .merchant-brand {
@@ -27,6 +28,7 @@
         font-size: 0.875rem;
         font-weight: 800;
         padding-top: 10px;
+        text-align: center;
     }
 
     .menu-drawer__item {
@@ -96,6 +98,14 @@
             .MuiInput-input:focus {
                 background-color: transparent;
             }
+        }
+    }
+}
+
+@media screen and (min-width: 386px) {
+    .menu-drawer {
+        .menu-drawer__box {
+            width: 300px;
         }
     }
 }
