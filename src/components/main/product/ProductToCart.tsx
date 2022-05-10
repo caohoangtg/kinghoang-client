@@ -4,7 +4,6 @@ import { styled } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import { grey } from '@mui/material/colors'
 // import Button from '@mui/material/Button'
-import { BsSearch } from 'react-icons/bs'
 import Box from '@mui/material/Box'
 //import Skeleton from '@mui/material/Skeleton'
 import SwipeableDrawer from '@mui/material/SwipeableDrawer'
@@ -18,6 +17,7 @@ import { Modifier } from '../modifier'
 import { Variant } from '../variant'
 import Button from '@mui/material/Button'
 import AdditionalRequest from './AdditionalRequest'
+import ProductInfo from './ProductInfo'
 
 const drawerBleeding = 56
 
@@ -27,6 +27,8 @@ interface Props {
      * You won't need it on your project.
      */
     window?: () => Window
+    isOpen: boolean
+    openProductDetail: any
 }
 
 const Root = styled('div')(({ theme }) => ({
@@ -41,23 +43,8 @@ const StyledBox = styled(Box)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'light' ? '#fff' : grey[800],
 }))
 
-// const Puller = styled(Box)(({ theme }) => ({
-//     width: 30,
-//     height: 6,
-//     backgroundColor: theme.palette.mode === 'light' ? grey[300] : grey[900],
-//     borderRadius: 3,
-//     position: 'absolute',
-//     top: 8,
-//     left: 'calc(50% - 15px)',
-// }))
-
 const ProductToCart = (props: Props) => {
-    const { window } = props
-    const [open, setOpen] = React.useState(false)
-
-    const toggleDrawer = (newOpen: boolean) => () => {
-        setOpen(newOpen)
-    }
+    const { window, isOpen, openProductDetail } = props
 
     // This is used only for the example
     const container =
@@ -75,26 +62,13 @@ const ProductToCart = (props: Props) => {
                         },
                     }}
                 />
-                <Box
-                    sx={{
-                        textAlign: 'center',
-                        pt: 1,
-                        backgroundColor: '#FFFFFF',
-                    }}
-                >
-                    {/* <Button onClick={toggleDrawer(true)}>Open</Button> */}
-                    <BsSearch
-                        size={'1.25em'}
-                        color="#F05223"
-                        onClick={toggleDrawer(true)}
-                    />
-                </Box>
+
                 <SwipeableDrawer
                     container={container}
                     anchor="bottom"
-                    open={open}
-                    onClose={toggleDrawer(false)}
-                    onOpen={toggleDrawer(true)}
+                    open={isOpen}
+                    onClose={() => openProductDetail(false)}
+                    onOpen={() => openProductDetail(false)}
                     disableSwipeToOpen={true}
                     ModalProps={{
                         keepMounted: false,
@@ -111,7 +85,7 @@ const ProductToCart = (props: Props) => {
                         }}
                         className="product-tc__header"
                     >
-                        <Button onClick={toggleDrawer(false)}>
+                        <Button onClick={() => openProductDetail(false)}>
                             <VscClose size={36} color="#333333" />
                         </Button>
 
@@ -131,26 +105,7 @@ const ProductToCart = (props: Props) => {
                         {/* <Skeleton variant="rectangular" height="100%" /> */}
                         <div className="product-tc__content">
                             <ProductImage />
-                            <div className="product-tc__info">
-                                <div className="product-tc__price">S$15.00</div>
-                                <div className="product-tc__package-fee">
-                                    Package fee: S$1.00
-                                </div>
-                            </div>
-                            <div className="product-tc__description">
-                                <p>
-                                    Bee hoon braised cooked for hours Lorem
-                                    ipsum dolor sit amet, consectetur adipiscing
-                                    elit. Duis vel ipsum feugiat, faucibus lorem
-                                    sit amet. Lorem ipsum dolor sit amet,
-                                    consectetur adipiscing elit, posuere. Lorem
-                                    ipsum dolor sit amet, consectetur adipiscing
-                                    elit. Duis vel ipsum feugiat, faucibus lorem
-                                    sit amet. Lorem ipsum dolor sit amet,
-                                    consectetur3
-                                </p>
-                                <a href="#a">See Less</a>
-                            </div>
+                            <ProductInfo />
                             <Variant />
                             <Modifier />
                             <Modifier />

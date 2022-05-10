@@ -2,9 +2,9 @@ import React from 'react'
 import Container from '@mui/material/Container'
 import { Link } from 'react-router-dom'
 import { Menu } from '../common'
-import ProductToCart from '../main/product/ProductToCart'
 import Divider from '@mui/material/Divider'
 import { ImCart } from 'react-icons/im'
+import { BsSearch } from 'react-icons/bs'
 
 const Header = () => {
     return (
@@ -18,8 +18,7 @@ const Header = () => {
                         Eighteen Chefs @ Bugis Junction
                     </div>
                     <div className="header__search-icon">
-                        {/* <BsSearch size={'1.25em'} color="#F05223" /> */}
-                        <ProductToCart />
+                        <BsSearch size={'1.25em'} color="#F05223" />
                         <Divider
                             orientation="vertical"
                             variant="middle"

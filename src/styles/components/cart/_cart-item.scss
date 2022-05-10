@@ -85,6 +85,7 @@
 
         .cart-item__action {
             display: flex;
+            flex-wrap: wrap-reverse;
             align-items: center;
 
             .cart-item__option {
@@ -92,6 +93,7 @@
                 display: flex;
                 justify-content: left;
                 align-items: center;
+                margin-left: -12px;
 
                 .cart-item__quality {
                     font-weight: 700;

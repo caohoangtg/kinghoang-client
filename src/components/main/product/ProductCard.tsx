@@ -1,6 +1,14 @@
 import React from 'react'
 
-const ProductCard = () => {
+interface Props {
+    openProductDetail: any
+}
+
+const ProductCard = ({ openProductDetail }: Props) => {
+    const openModal = () => {
+        openProductDetail(true)
+    }
+
     return (
         <div className="product-card">
             <div className="product-card__media">
@@ -24,6 +32,7 @@ const ProductCard = () => {
                 <button
                     className="product-card__btn-add button-add"
                     type="button"
+                    onClick={openModal}
                 >
                     ADD
                 </button>

@@ -2,7 +2,15 @@ import React from 'react'
 import ProductLinear from './ProductLinear'
 //import { Link } from 'react-router-dom'
 
-const ProductList = () => {
+interface Props {
+    openProductDetail: any
+}
+
+const ProductList = ({ openProductDetail }: Props) => {
+    const openModal = (newOpen: boolean) => {
+        openProductDetail(newOpen)
+    }
+
     return (
         <div className="product-list">
             <div className="product-list__title-category">Coconut series</div>
@@ -20,10 +28,10 @@ const ProductList = () => {
                     5PM)
                 </p>
             </div>
-            <ProductLinear />
-            <ProductLinear />
-            <ProductLinear />
-            <ProductLinear />
+            <ProductLinear openProductDetail={openModal} />
+            <ProductLinear openProductDetail={openModal} />
+            <ProductLinear openProductDetail={openModal} />
+            <ProductLinear openProductDetail={openModal} />
         </div>
     )
 }

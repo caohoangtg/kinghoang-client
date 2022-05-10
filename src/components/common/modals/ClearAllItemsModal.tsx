@@ -1,6 +1,6 @@
 import React from 'react'
 import Modal from 'react-modal'
-import { FaArrowCircleLeft } from 'react-icons/fa'
+import { VscClose } from 'react-icons/vsc'
 
 interface Props {
     isOpen: boolean
@@ -13,50 +13,43 @@ const ClearAllItemsModal = ({ isOpen, toggleModal }: Props) => {
             <Modal
                 isOpen={isOpen}
                 ariaHideApp={false}
-                contentLabel="Dine-In Modal"
-                portalClassName="dinein-modal"
-                overlayClassName="dinein-modal-overlay"
-                className="dinein-modal-content"
+                onRequestClose={() => toggleModal(false)}
+                contentLabel="Clear All Modal"
+                portalClassName="clear-all-modal"
+                overlayClassName="clear-all-modal-overlay"
+                className="clear-all-modal-content"
             >
-                <div className="dinein-modal-body">
-                    <FaArrowCircleLeft
+                <div className="clear-all-modal-body">
+                    <VscClose
                         onClick={() => toggleModal(false)}
-                        size={28}
-                        color="rgb(217 167 71 / 63%)"
-                        className="dinein-modal__close"
+                        size={36}
+                        color="#333333"
+                        className="clear-all-modal__close"
                     />
-
                     <img
-                        className="dinein-modal__logo"
-                        src="./images/Logo.png"
+                        className="clear-all-modal__logo"
+                        src="./images/CartX.png"
                         alt="logo"
                     />
 
-                    <form className="dinein-modal__form">
-                        <div className="dinein-modal__pax-form">
-                            <div className="dinein-modal__form-input">
-                                <label
-                                    className="label-dinein"
-                                    htmlFor="no-pax"
-                                >
-                                    Clear All Items From Cart?
-                                </label>
-                            </div>
-                            <button
-                                type="button"
-                                className="dinein-modal__btn-next btn-dinein"
-                                onClick={() => toggleModal(false)}
-                            >
-                                Yes, clear all items
-                            </button>
-                            <button
-                                type="button"
-                                className="dinein-modal__btn-next btn-dinein"
-                                onClick={() => toggleModal(false)}
-                            >
-                                No
-                            </button>
-                        </div>
+                    <form className="clear-all-modal__form">
+                        <label className="label-clear-all" htmlFor="no-pax">
+                            Clear All Items From Cart?
+                        </label>
+                        <button
+                            type="button"
+                            className="btn-clear-all"
+                            onClick={() => toggleModal(false)}
+                        >
+                            Yes, clear all items
+                        </button>
+                        <button
+                            type="button"
+                            className="btn-no"
+                            onClick={() => toggleModal(false)}
+                        >
+                            No
+                        </button>
                     </form>
                 </div>
             </Modal>

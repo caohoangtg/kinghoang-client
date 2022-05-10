@@ -1,8 +1,16 @@
 import React from 'react'
 
-const ProductLinear = () => {
+interface Props {
+    openProductDetail: any
+}
+
+const ProductLinear = ({ openProductDetail }: Props) => {
+    const openModal = () => {
+        openProductDetail(true)
+    }
+
     return (
-        <>
+        <React.Fragment>
             <div className="product-linear">
                 <div className="product-linear__media">
                     <img
@@ -27,6 +35,7 @@ const ProductLinear = () => {
                         <button
                             className="product-linear__btn-add button-add"
                             type="button"
+                            onClick={openModal}
                         >
                             ADD
                         </button>
@@ -50,13 +59,14 @@ const ProductLinear = () => {
                         <button
                             className="product-linear__btn-add button-add"
                             type="button"
+                            onClick={openModal}
                         >
                             ADD
                         </button>
                     </div>
                 </div>
             </div>
-        </>
+        </React.Fragment>
     )
 }
 

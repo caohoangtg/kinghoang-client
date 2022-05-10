@@ -15,13 +15,20 @@ import { AiOutlineRight } from 'react-icons/ai'
 import { FaArrowCircleRight } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
-const Recommended = () => {
+interface Props {
+    openProductDetail: any
+}
+
+const Recommended = ({ openProductDetail }: Props) => {
     // const pagination = {
     //     clickable: true,
     //     renderBullet: function (index: number, className: string) {
     //         return `<span class="${className} custom-dot"></span>`
     //     },
     // }
+    const openModal = (newOpen: boolean) => {
+        openProductDetail(newOpen)
+    }
 
     return (
         <div className="recommended">
@@ -45,22 +52,22 @@ const Recommended = () => {
                 // onSwiper={(swiper) => console.log(swiper)}
             >
                 <SwiperSlide>
-                    <ProductCard />
+                    <ProductCard openProductDetail={openModal} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <ProductCard />
+                    <ProductCard openProductDetail={openModal} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <ProductCard />
+                    <ProductCard openProductDetail={openModal} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <ProductCard />
+                    <ProductCard openProductDetail={openModal} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <ProductCard />
+                    <ProductCard openProductDetail={openModal} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <ProductCard />
+                    <ProductCard openProductDetail={openModal} />
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="product-card product-card__see-more">
