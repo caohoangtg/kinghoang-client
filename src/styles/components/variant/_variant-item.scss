@@ -4,6 +4,10 @@
     align-items: center;
     border-bottom: 1px solid #ebebeb;
 
+    .variant-item__select {
+        margin-right: -10px;
+    }
+
     .variant-item__radio {
         color: var(--color-main);
     }

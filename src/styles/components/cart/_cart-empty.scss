@@ -1,0 +1,30 @@
+.cart-empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 15px 30px;
+
+    .cart-empty__message {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        text-align: center;
+        color: #333333;
+        margin-bottom: 30px;
+    }
+
+    .btn-order-now {
+        border: none;
+        width: 150px;
+        height: 40px;
+        background: var(--color-main);
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 19px;
+        text-align: center;
+        color: #ffffff;
+        margin-bottom: 15px;
+    }
+}

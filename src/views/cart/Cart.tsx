@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../styles/components/_cart.scss'
 import {
-    CartEmpty,
+    // CartEmpty,
     CartNote,
     CartPayment,
     CartProducts,
@@ -15,7 +15,7 @@ const Cart = () => {
                 <CartHeader />
                 <div className="cart-body">
                     <CartProducts />
-                    <CartEmpty />
+                    {/* <CartEmpty /> */}
                     <CartPayment />
                     <CartNote />
                 </div>

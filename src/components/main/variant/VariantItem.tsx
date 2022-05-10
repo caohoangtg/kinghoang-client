@@ -10,7 +10,7 @@ const VariantItem = ({ controlProps }: Props) => {
         <div className="variant-item">
             <span>500g</span>
             <span>+S$15.00</span>
-            <div>
+            <div className="variant-item__select">
                 <Radio
                     className="variant-item__radio"
                     {...controlProps}

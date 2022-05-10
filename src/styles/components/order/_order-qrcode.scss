@@ -1,0 +1,43 @@
+.order-qr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+    margin-bottom: 15px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 30px;
+        right: 30px;
+        bottom: 0;
+        border-bottom: 1px solid #888888;
+    }
+
+    .order-qr__message {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 19px;
+        text-align: center;
+        color: var(--color-main);
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .order-qr__order-no {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+        text-align: center;
+        color: #333333;
+        padding-top: 10px;
+        margin-bottom: 15px;
+
+        .order-qr__no {
+            color: var(--color-main);
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,12 +1,18 @@
 import React from 'react'
-import { ImCart } from 'react-icons/im'
+import { GiShoppingCart } from 'react-icons/gi'
 
 const CartEmpty = () => {
     return (
-        <div>
-            <ImCart size={'4em'} color="#F05223" />
-            <div>Looks like you have no items in your cart!</div>
-            <button>ORDER NOW!</button>
+        <div className="cart-empty">
+            <GiShoppingCart
+                className="cart-empty__icon color-theme"
+                size={'8em'}
+                color="#F05223"
+            />
+            <div className="cart-empty__message">
+                Looks like you have no items in your cart!
+            </div>
+            <button className="btn-order-now">ORDER NOW!</button>
         </div>
     )
 }

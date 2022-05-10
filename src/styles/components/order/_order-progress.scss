@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 15px;
 
     .vertical {
         display: flex;
@@ -13,6 +14,7 @@
             padding: 10px;
             height: 80px;
             display: flex;
+            width: 100%;
 
             &::before {
                 content: '';
@@ -41,29 +43,34 @@
                 display: flex;
                 justify-content: start;
                 align-items: center;
+                flex-grow: 1;
+                opacity: 0.6;
             }
 
             .order-progress__icon {
-                background: #333333;
-                padding: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 color: #ffffff;
+                width: 85px;
             }
 
             .order-progress__content {
                 padding: 15px;
                 flex-grow: 1;
+                width: 100%;
 
                 .order-progress__title {
                     font-weight: 700;
                     font-size: 18px;
                     line-height: 25px;
-                    color: #737373;
+                    //color: #737373;
                 }
 
                 .order-progress__msg {
                     font-size: 14px;
                     line-height: 19px;
-                    color: #737373;
+                    //color: #737373;
                 }
             }
 
@@ -73,15 +80,31 @@
                     width: 30px;
                     height: 30px;
                     border: 2px solid var(--color-main);
-                    background-color: var(--color-main);
                 }
 
                 &:not(:first-child)::after {
                     border-left: 4px dashed var(--color-main);
                 }
 
-                .order-progress__icon {
-                    background: #333333;
+                // .order-progress__icon {
+                //     background: #92e5d2;
+                // }
+
+                .order-progress__box {
+                    opacity: 1;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: -31px;
+                        top: 43px;
+                        width: 15px;
+                        height: 7px;
+                        border-left: 2px solid var(--color-main);
+                        border-bottom: 2px solid var(--color-main);
+                        z-index: 2;
+                        transform: rotate(-45deg);
+                    }
                 }
 
                 .order-progress__content {
@@ -96,8 +119,16 @@
                         left: -40px;
                         width: 30px;
                         height: 30px;
-                        border: 2px solid red;
-                        background-color: red;
+                        border: 2px solid var(--color-main);
+                        background-color: var(--color-main);
+                    }
+
+                    .order-progress__icon-hourglass {
+                        content: '';
+                        position: absolute;
+                        left: -34px;
+                        top: 39px;
+                        z-index: 2;
                     }
 
                     .order-progress__content {
@@ -109,9 +140,24 @@
                         }
                     }
 
-                    .order-progress__icon {
-                        background: var(--color-main);
+                    .order-progress__box {
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: -39px;
+                            transform: translateY(-50%);
+                            width: 30px;
+                            height: 30px;
+                            border: 1px solid #ffffff;
+                            border-radius: 50%;
+                            background-color: transparent;
+                        }
                     }
+
+                    // .order-progress__icon {
+                    //     background: var(--color-main);
+                    // }
                 }
             }
         }

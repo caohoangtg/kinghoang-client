@@ -4,7 +4,7 @@
     border-radius: 7px;
     text-align: center;
     height: 200px;
-    width: 140px;
+    //width: 140px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -57,7 +57,7 @@
     }
 
     &.product-card__see-more {
-        width: 108px;
+        width: 78%;
 
         .product-card__see-more-box {
             flex-grow: 1;

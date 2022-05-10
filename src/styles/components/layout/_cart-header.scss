@@ -32,7 +32,9 @@
         }
     }
 
-    .cart-header__clear-all {
+    .cart-header__clear-all button {
+        border: none;
+        background: none;
         font-weight: 700;
         font-size: 14px;
         line-height: 19px;

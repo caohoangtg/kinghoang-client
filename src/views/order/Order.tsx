@@ -1,6 +1,12 @@
 import React from 'react'
 import { Footer, OrderHeader } from '../../components/layout'
-import { OrderAction, OrderSummary } from '../../components/main'
+import {
+    OrderAction,
+    OrderInstantDiscount,
+    OrderProgress,
+    OrderQRCode,
+    //OrderSummary,
+} from '../../components/main'
 import '../../styles/components/_order.scss'
 import Container from '@mui/material/Container'
 
@@ -10,7 +16,10 @@ const Order = () => {
             <OrderHeader />
             <Container fixed>
                 <div className="order-body">
-                    <OrderSummary />
+                    {/* <OrderSummary /> */}
+                    <OrderInstantDiscount />
+                    <OrderQRCode />
+                    <OrderProgress />
                     <OrderAction />
                 </div>
             </Container>

@@ -3,7 +3,21 @@
 
     .order-action__redirect {
         position: absolute;
-        top: 15px;
+        bottom: 15px;
         right: 15px;
+    }
+
+    .order-action__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+
+        .box-outlined:first-child {
+            margin-right: 25px;
+        }
+    }
+
+    .order-action__icon-receipt {
+        margin-right: 15px;
     }
 }
