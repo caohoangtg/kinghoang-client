@@ -6,7 +6,7 @@ import { FaArrowCircleLeft, FaAngleDoubleRight } from 'react-icons/fa'
 Modal.setAppElement(document.getElementById('root') as HTMLElement)
 
 const DineInModal = () => {
-    const [modalIsOpen, setIsOpen] = React.useState(false)
+    const [modalIsOpen, setIsOpen] = React.useState(true)
     const [isPax, setIsPax] = React.useState(true)
 
     // function openModal() {

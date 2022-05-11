@@ -6,6 +6,7 @@ import {
     Recommended,
     CategoryTab,
     ProductToCart,
+    CartSpeedDial,
 } from '../../components/main'
 import Container from '@mui/material/Container'
 import { DineInModal } from '../../components/common'
@@ -36,6 +37,7 @@ const Home = () => {
                         isOpen={isOpen}
                         openProductDetail={openModal}
                     />
+                    <CartSpeedDial />
                 </main>
                 <Footer />
             </div>
