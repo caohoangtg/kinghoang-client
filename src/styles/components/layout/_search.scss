@@ -1,0 +1,90 @@
+.search {
+    font-family: var(--font-family);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .search-box {
+        display: flex;
+    }
+
+    .search-icon {
+        color: var(--color-main);
+        font-size: 1.25em;
+    }
+
+    .search-text,
+    .search-clear-text,
+    .search-cancel,
+    .search-result {
+        display: none;
+    }
+
+    &.open {
+        .search-text,
+        .search-clear-text,
+        .search-cancel,
+        .search-result {
+            display: block;
+        }
+
+        justify-content: start;
+        align-items: start;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #ffffff;
+        width: 100%;
+        // height: 100%;
+        padding: 7px 16px;
+
+        .search-box {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            transition-property: all;
+            transition-duration: 1s;
+
+            .search-icon {
+                color: #c4c4c4;
+                position: absolute;
+                left: 10px;
+                font-size: 1em;
+                transition-property: all;
+                transition-duration: 1s;
+            }
+
+            input {
+                background: #f6f2f0;
+                border: 0.5px solid #ebebeb;
+                border-radius: 6px;
+                width: 100%;
+                height: 36px;
+                padding: 5px 35px;
+
+                &::placeholder,
+                &::-moz-placeholder,
+                &::-webkit-input-placeholder,
+                &::-moz-placeholder {
+                    padding: 5px 35px;
+                }
+            }
+
+            .search-clear-text {
+                color: #c4c4c4;
+                position: absolute;
+                right: 70px;
+            }
+
+            .search-cancel {
+                border: none;
+                background-color: transparent;
+                padding-left: 16px;
+                font-size: 14px;
+                color: var(--color-main);
+            }
+        }
+    }
+}
