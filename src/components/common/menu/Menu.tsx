@@ -62,11 +62,13 @@ const Menu = () => {
                 <VscClose size={36} color="#333333" />
             </Button>
             <div className="merchant-brand">
-                <img
-                    className="merchant-brand__avatar"
-                    alt="Remy Sharp"
-                    src="/images/18-Chef.png"
-                />
+                <Link to={'/'}>
+                    <img
+                        className="merchant-brand__avatar"
+                        alt="Remy Sharp"
+                        src="/images/18-Chef.png"
+                    />
+                </Link>
                 <div className="merchant-brand__name">
                     Eighteen Chefs @ Bugis Junction
                 </div>

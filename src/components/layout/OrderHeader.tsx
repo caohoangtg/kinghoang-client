@@ -1,5 +1,6 @@
 import React from 'react'
 import Container from '@mui/material/Container'
+import { Link } from 'react-router-dom'
 
 const OrderHeader = () => {
     return (
@@ -7,7 +8,9 @@ const OrderHeader = () => {
             <Container fixed>
                 <div className="order-header__container">
                     <div className="order-header__menu-icon">
-                        <img src="./images/Chef-18.png" alt="brand" />
+                        <Link to={'/'}>
+                            <img src="./images/Chef-18.png" alt="brand" />
+                        </Link>
                     </div>
                     <div className="order-header__brand-name">
                         Eighteen Chefs @ Bugis Junction
