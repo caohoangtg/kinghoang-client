@@ -1,0 +1,14 @@
+.order {
+    .order-body {
+        margin-top: 90px;
+        padding-top: 15px;
+        padding-bottom: 100px;
+    }
+}
+
+@import './order/_order-summary.scss';
+@import './order/_order-product.scss';
+@import './order/_order-action.scss';
+@import './order/_order-progress.scss';
+@import './order/_order-qrcode.scss';
+@import './order/_order-instant-discount.scss';

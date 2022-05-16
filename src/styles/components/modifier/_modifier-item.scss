@@ -1,0 +1,14 @@
+.modifier-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ebebeb;
+
+    .modifier-item__quality {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 16px;
+        color: #333333;
+        margin-right: -10px;
+    }
+}

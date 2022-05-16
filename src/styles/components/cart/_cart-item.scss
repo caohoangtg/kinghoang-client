@@ -1,0 +1,115 @@
+.cart-item__card {
+    display: flex;
+    padding: 5px;
+    background: #ffffff;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    margin-bottom: 15px;
+
+    .cart-item__media {
+        display: flex;
+        flex-direction: column;
+        width: 60px;
+        flex: none;
+
+        .cart-item__img {
+            border-radius: 3px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .cart-item__edit {
+            font-size: 14px;
+            line-height: 16px;
+            text-align: center;
+            letter-spacing: 0.02em;
+            text-decoration-line: underline;
+            color: #888888;
+            padding: 10px 5px;
+        }
+    }
+
+    .cart-item__content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        padding: 5px 0 0 15px;
+
+        .cart-item__title {
+            display: flex;
+            margin-bottom: 10px;
+
+            .cart-item__name {
+                flex-grow: 1;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 19px;
+                letter-spacing: 0.02em;
+                color: #333333;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                padding-right: 5px;
+            }
+
+            .cart-item__icon-trash {
+                flex: none;
+            }
+        }
+
+        .cart-item__modifier {
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 0.02em;
+            color: #585858;
+
+            .cart-item__modifier-item {
+                display: list-item;
+                margin-left: 17px;
+            }
+
+            .cart-item__less-spicy {
+                padding-top: 15px;
+                padding-bottom: 10px;
+                display: flex;
+                justify-content: start;
+                align-items: end;
+
+                svg {
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        .cart-item__action {
+            display: flex;
+            flex-wrap: wrap-reverse;
+            align-items: center;
+
+            .cart-item__option {
+                flex-grow: 1;
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                margin-left: -12px;
+
+                .cart-item__quality {
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 16px;
+                    color: #333333;
+                }
+            }
+
+            .cart-item__price {
+                font-size: 16px;
+                line-height: 19px;
+                text-align: right;
+                letter-spacing: 0.02em;
+                color: #333333;
+            }
+        }
+    }
+}

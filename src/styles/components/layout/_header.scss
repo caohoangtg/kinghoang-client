@@ -1,0 +1,37 @@
+.header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9;
+
+    .header__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 11px 0;
+        text-align: center;
+    }
+
+    .header__brand-name {
+        flex-grow: 1;
+        color: var(--color-main-text);
+        font-size: 0.875rem;
+        font-weight: 800;
+    }
+
+    .header__menu-icon,
+    .header__search-icon {
+        display: flex;
+        cursor: pointer;
+    }
+
+    .header__search-icon {
+        position: relative;
+        width: 20px;
+        height: 20px;
+    }
+}

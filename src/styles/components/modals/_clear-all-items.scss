@@ -1,0 +1,56 @@
+.clear-all-modal {
+    font-family: var(--font-family);
+    color: var(--color-main-text);
+
+    .clear-all-modal-overlay {
+        position: fixed;
+        inset: 0px;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        z-index: 10;
+    }
+
+    .clear-all-modal-content {
+        position: absolute;
+        inset: 50% auto auto 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        overflow: auto;
+        outline: none;
+        padding: 15px;
+        width: 90%;
+
+        .clear-all-modal-body {
+            position: relative;
+            text-align: center;
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 15px;
+
+            .clear-all-modal__close {
+                position: absolute;
+                right: 15px;
+                top: 22px;
+            }
+
+            .clear-all-modal__logo {
+                padding: 30px 0;
+            }
+
+            .clear-all-modal__form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .label-clear-all {
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 27px;
+                    text-align: center;
+                    color: #333333;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}

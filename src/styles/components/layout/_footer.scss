@@ -1,0 +1,24 @@
+.footer {
+    background-color: var(--color-main);
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 30px 30px 10px;
+
+    .footer__menu {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+
+        .footer__menu-item {
+            div {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .footer__copyright {
+        text-align: center;
+        letter-spacing: 0.02em;
+    }
+}

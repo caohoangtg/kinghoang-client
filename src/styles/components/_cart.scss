@@ -1,0 +1,19 @@
+.cart {
+    .cart-body {
+        margin-top: 50px;
+        padding: 15px 15px 60px;
+        margin-bottom: 67px;
+    }
+}
+
+@import './layout/_cart-header.scss';
+@import './layout/_cart-footer.scss';
+
+@import './cart/_cart-products.scss';
+@import './cart/_cart-item.scss';
+@import './cart/_cart-payment.scss';
+@import './cart/_cart-note.scss';
+@import './cart/_cart-empty.scss';
+@import './cart/_cart-speed-dial.scss';
+
+@import './modals/_clear-all-items.scss';

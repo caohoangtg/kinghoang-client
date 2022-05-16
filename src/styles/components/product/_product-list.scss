@@ -1,0 +1,31 @@
+.product-list {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 25px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: -16px;
+        right: -16px;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .product-list__title-category {
+        color: var(--color-main);
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        font-weight: 700;
+        font-size: 16px;
+        flex-grow: 1;
+    }
+
+    .product-list__description-category {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}

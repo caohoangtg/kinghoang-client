@@ -1,0 +1,29 @@
+.order-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9;
+
+    .order-header__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 7px 0;
+        text-align: left;
+    }
+
+    .order-header__menu-icon {
+        margin-right: 10px;
+    }
+
+    .order-header__brand-name {
+        flex-grow: 1;
+        color: var(--color-main);
+        font-size: 20px;
+        font-weight: 800;
+    }
+}
